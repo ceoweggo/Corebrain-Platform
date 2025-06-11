@@ -1,0 +1,308 @@
+/* src/styles/subscription.css */
+
+/* Estilos para el indicador de suscripción */
+.subscription-indicator {
+  display: flex;
+  align-items: center;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  color: #fff;
+}
+
+.subscription-indicator:hover {
+  transform: translateY(-1px);
+  color: #fff;
+}
+
+.subscription-indicator i {
+  font-size: 0.9rem;
+}
+
+.subscription-indicator .days-remaining {
+  font-size: 0.75rem;
+  opacity: 0.9;
+}
+
+.subscription-indicator.subscription-active {
+  background-color: #28a745;
+}
+
+.subscription-indicator.subscription-active:hover {
+  background-color: #218838;
+}
+
+.subscription-indicator.subscription-trial {
+  background-color: #ffc107;
+  color: #212529;
+}
+
+.subscription-indicator.subscription-trial:hover {
+  background-color: #e0a800;
+  color: #212529;
+}
+
+.subscription-indicator.subscription-expired,
+.subscription-indicator.subscription-cancelled,
+.subscription-indicator.subscription-inactive {
+  background-color: #dc3545;
+}
+
+.subscription-indicator.subscription-expired:hover,
+.subscription-indicator.subscription-cancelled:hover,
+.subscription-indicator.subscription-inactive:hover {
+  background-color: #c82333;
+}
+
+.subscription-indicator.subscription-none {
+  background-color: #6c757d;
+}
+
+.subscription-indicator.subscription-none:hover {
+  background-color: #5a6268;
+}
+
+/* Estado detallado de suscripción */
+.subscription-status {
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.subscription-active {
+  background-color: #f8fff8;
+  border: 1px solid #28a745;
+}
+
+.subscription-trial {
+  background-color: #fffdf5;
+  border: 1px solid #ffc107;
+}
+
+.subscription-expired,
+.subscription-inactive,
+.subscription-cancelled {
+  background-color: #fff9f9;
+  border: 1px solid #dc3545;
+}
+
+.subscription-none {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+}
+
+.subscription-details {
+  margin: 1rem 0;
+}
+
+.subscription-features {
+  margin: 1.5rem 0;
+}
+
+.subscription-features ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.subscription-features li {
+  padding: 0.5rem 0;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.subscription-features li::before {
+  content: "✓";
+  color: #28a745;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+.subscription-actions {
+  margin-top: 1.5rem;
+}
+
+/* Planes de suscripción */
+.plans-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.plan-card {
+  flex: 1;
+  min-width: 260px;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 1.5rem;
+  position: relative;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.plan-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.plan-recommended {
+  border-color: #007bff;
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.1);
+}
+
+.plan-selected {
+  border-color: #28a745;
+  box-shadow: 0 5px 15px rgba(40, 167, 69, 0.1);
+}
+
+.plan-current {
+  border-color: #6c757d;
+  opacity: 0.8;
+}
+
+.plan-badge {
+  position: absolute;
+  top: -10px;
+  right: 10px;
+  background-color: #007bff;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.plan-current-badge {
+  background-color: #6c757d;
+}
+
+.plan-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.plan-price {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.plan-price .interval {
+  font-size: 1rem;
+  color: #6c757d;
+  font-weight: normal;
+}
+
+.plan-features {
+  margin-bottom: 1.5rem;
+}
+
+.plan-features ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.plan-features li {
+  padding: 0.5rem 0;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.plan-features li::before {
+  content: "✓";
+  color: #28a745;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+.subscription-action {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+/* Historial de pagos */
+.payment-history {
+  margin: 2rem 0;
+}
+
+.payment-history-empty {
+  padding: 2rem;
+  text-align: center;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border: 1px dashed #dee2e6;
+}
+
+.payment-status {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.payment-completed {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.payment-pending {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.payment-failed {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.payment-refunded {
+  background-color: #e2e3e5;
+  color: #383d41;
+}
+
+/* Método de pago */
+.payment-method-info {
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.payment-icon i {
+  color: #6c757d;
+}
+
+/* Página de carga */
+.auth-loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .plans-container {
+    flex-direction: column;
+  }
+  
+  .plan-card {
+    width: 100%;
+  }
+  
+  .subscription-actions {
+    flex-direction: column;
+  }
+  
+  .subscription-actions button,
+  .subscription-actions a {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+}
